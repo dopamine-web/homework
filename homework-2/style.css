@@ -1,0 +1,20 @@
+.block {
+    background-color: #433d3d ;
+    color: #fff;
+}
+.span {
+    color: #e681ea;
+}
+.element {
+    background-color: #c59ef9;
+    width: 300px;
+}
+.kvadrat {
+    width: 100px;
+    height: 100px;
+    background-color: #f74344;
+}
+.span1 {
+    background-color: #7342b7;
+    color: #fff;
+}
