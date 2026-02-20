@@ -1,0 +1,4 @@
+.container__liders {
+    padding-top: clamp(42px, 2.1vw + 33.8px, 64px);
+    padding-bottom: clamp(50px, 2.86vw + 38.9px, 80px);
+}

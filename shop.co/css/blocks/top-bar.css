@@ -1,0 +1,44 @@
+.top-bar--hidden {
+  display: none;
+}
+
+.top-bar {
+  background-color: #000;
+  padding-block: 10px;
+}
+
+.top-bar__container {
+  position: relative;
+  display: flex;
+justify-content: center;
+}
+
+.top-bar__wrapper {
+  
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+}
+
+@media (width <= 660px) {
+  .top-bar__wrapper {
+    justify-self: center;
+  }
+}
+
+.top-bar__btn-cross {
+  position: absolute;
+  right: 0;
+  align-self: center;
+}
+
+.top-bar__link {
+  color: #fff;
+  text-decoration: underline;
+}
+@media (width <= 660px) {
+  .top-bar__text {
+    display: none;
+  }
+}

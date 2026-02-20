@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__logo">
+          <button
+            class="header__burger burger"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="header__menu"
+          >
+            <svg width="24" height="24">
+              <use
+                class="burger__icon-menu"
+                href="./icons/sprite.svg#burger"
+              ></use>
+              <use
+                class="burger__icon-cross"
+                href="./icons/sprite.svg#cross"
+              ></use>
+            </svg>
+          </button>
+
+          <a href="/" class="header__logo-link"> shop.co </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#shop" class="header__nav-link"
+                >Магазин
+                <svg width="16" height="16">
+                  <use href="./icons//arrows.svg#down-arrow"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="" class="header__nav-link">Скидки</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#news" class="header__nav-link">Новые поступления</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#brands" class="header__nav-link">Бренды</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <button class="header__search">
+            <svg width="24" height="24">
+              <use
+                class="header__seacrh-icon"
+                href="./icons/sprite.svg#search"
+              ></use>
+            </svg>
+            <p class="header__search-text">Искать товары...</p>
+          </button>
+          <a
+            class="header__actions-button"
+            title="Корзина"
+            aria-label="Корзина"
+          >
+            <svg width="24" height="24">
+              <use
+                class="header__actions-icon"
+                href="./icons/sprite.svg#cart"
+              ></use>
+            </svg>
+          </a>
+          <a
+            href="personal-account.html"
+            class="header__actions-button"
+            title="Личный кабинет"
+            aria-label="Личный кабинет"
+          >
+            <svg width="24" height="24">
+              <use
+                class="header__actions-icon"
+                href="./icons/sprite.svg#kabinet"
+              ></use>
+            </svg>
+          </a>
+        </div>
+        <!-- <div class="header__search">
+          <svg width="24" height="24" > 
+            <use class="header__seacrh-icon" href="./icons/sprite.svg#search"></use>
+          </svg>
+          <p class="header__search-text">Искать товары...</p>
+        </div>
+        <div class="header__actions">
+          <button
+            class="header__actions-button"
+            title="Корзина"
+            aria-label="Корзина"
+          >
+            <svg width="24" height="24">
+              <use
+                class="header__actions-icon"
+                href="./icons/sprite.svg#cart"
+              ></use>
+            </svg>
+          </button>
+          <button
+              class="header__actions-button"
+              title="Личный кабинет"
+              aria-label="Личный кабинет"
+            >
+              <svg width="24" height="24">
+                <use
+                  class="header__actions-icon"
+                  href="./icons/sprite.svg#kabinet"
+                ></use>
+              </svg>
+            </button>
+        </div> -->
+      </div>
+    </header>
+    <main class="main">
+      <section class="user-account">
+        <div
+          data-ng-controller="privateOfficeController"
+          class="container user-account__container"
+        >
+          <div class="page-user-account">
+            <ul class="page-user-account__tabs">
+              <li
+                data-ng-class='{active: activeTab === "contact-info"}'
+                data-ng-click='activeTab = "contact-info"'
+                class="page-user-account__tabs-item"
+              >
+                Контактная информация
+              </li>
+              <li
+                data-ng-class='{active: activeTab === "address-book"}'
+                data-ng-click='activeTab = "address-book"'
+                class="page-user-account__tabs-item"
+              >
+                Адресная книга
+              </li>
+              <li class="page-user-account__tabs-item">История заказов</li>
+              <li class="page-user-account__tabs-item">Список желаний</li>
+              <li class="page-user-account__tabs-item">Любимые бренды</li>
+              <li class="page-user-account__tabs-item">Промокоды</li>
+              <li class="page-user-account__tabs-delete">Delete my account</li>
+              <li class="page-user-account__tabs-item-exit">Выход</li>
+            </ul>
+            <div class="page-user-account__content">
+              <span
+                class="page-user-account__mobile-item active"
+                data-ng-class='{active: activeTab === "contact-info"}'
+                data-ng-click='activeTab = activeTab === "contact-info" ? "" : "contact-info"'
+              >
+                Контактная информация
+              </span>
+              <form action="">
+                <h2></h2>
+                <div class="private-office__column private-office__form-wrapper">
+                  <div class="group">
+                    <div class="col">
+                      <input
+                      class="input"
+                        id="name"
+                        type="text"
+                        name="name"
+                        placeholder="Ваше имя"
+                      />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="col">
+                      <input
+                      class="input"
+                        id="surname"
+                        type="text"
+                        name="surname"
+                        placeholder="Фамилия"
+                        value=""
+                      />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="col">
+                      <input
+                      class="input"
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="E-mail / Логин"
+                        value=""
+                        required=""
+                      />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="col">
+                      <input
+                      class="input"
+                        id="birthday"
+                        readonly=""
+                        type="text"
+                        name="birthday"
+                        placeholder="Дата рождения"
+                        value=""
+                        min="1920-01-01"
+                        max="2026-02-01"
+                        data-type="date"
+                        required=""
+                        class="profile-form-input"
+                      />
+                      <span class="bar"></span>
+                    </div>
+                    <div class="col">
+                      <input
+                      class="input"
+                        id="phone"
+                        type="tel"
+                        name="phone"
+                        value=""
+                        placeholder="Телефон"
+                        maxlength="20"
+                        required=""
+                        pattern=""
+                        data-pattern=""
+                      />
+                      <spam class="bar"></spam>
+                    </div>
+                    <a
+                      class="link subscription-link"
+                      href="/ru/subscription/manage/"
+                      >Управление подписками</a
+                    >
+                  </div>
+                  <div class="group">
+                    <div class="col">
+                      <input
+                      class="input"
+                        id="password"
+                        type="password"
+                        name="old-password"
+                        placeholder="Старый пароль"
+                        autocomplete="new-password"
+                        value=""
+                        data-compare="compare-password"
+                        class="profile-form-input"
+                        aria-autocomplete="list"
+                      />
+                      <div class="password-show-button"></div>
+                      <span class="bar"></span>
+                    </div>
+                    <div class="col">
+                      <input
+                      class="input"
+                        id="password-new"
+                        type="password"
+                        name="password"
+                        placeholder="Новый пароль"
+                        autocomplete="new-password"
+                        value=""
+                        data-compare="compare-password"
+                        class="profile-form-input"
+                      />
+                      <div class="password-show-button"></div>
+                      <span class="bar"></span>
+                    </div>
+                    <div class="col">
+                      <input
+                      class="input"
+                        id="compare-password"
+                        data-required="Пароли не совпадают"
+                        type="password"
+                        name="repeat-password"
+                        placeholder="Подтверждение пароля"
+                        autocomplete="new-password"
+                        value=""
+                        class="profile-form-input"
+                      />
+                      <div class="password-show-button"></div>
+                      <span class="bar"></span>
+                    </div>
+                  </div>
+                  
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="disctribution">
+        <div class="container disctribution__container">
+          <h3 class="disctribution__title">
+            БУДЬТЕ В КУРСЕ ВСЕХ ПОСЛЕДНИХ НОВОСТЕЙ
+          </h3>
+          <form class="disctribution__form">
+            <label class="disctribution__form-label">
+              <div class="input-wrapper">
+                <svg width="24" height="24">
+                  <use href="./icons/sprite.svg#mail"></use>
+                </svg>
+                <input
+                  class="disctribution__input"
+                  type="email"
+                  placeholder="Ваша почта"
+                />
+              </div>
+            </label>
+            <button class="disctribution__button" type="submit">
+              Подписаться на рассылку
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="container footer__container">
+        <div class="footer__wrapper">
+          <div class="footer__logo-link">
+            <a href="/" class="footer__logo-link header__logo-link">
+              shop.co
+            </a>
+          </div>
+          <p class="footer__descr">
+            У нас есть одежда, что подходит вашему стилю и которой можно
+            гордиться. Для женщин и мужчин.
+          </p>
+          <div class="footer__socials-links">
+            <a href="#">
+              <svg width="28" height="28">
+                <use href="./icons/socials.svg#twitter"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="28" height="28">
+                <use href="./icons/socials.svg#facebook"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="28" height="28">
+                <use href="./icons/socials.svg#instagram"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="28" height="28">
+                <use href="./icons/socials.svg#reddit"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__homepage-wrapper">
+          <ul class="footer__homepage-list">
+            <h5 class="footer__homepage-title">Компания</h5>
+            <li class="footer__homepage-item">О нас</li>
+            <li class="footer__homepage-item">Функции</li>
+            <li class="footer__homepage-item">Работы</li>
+            <li class="footer__homepage-item">Карьера</li>
+          </ul>
+          <ul class="footer__homepage-list">
+            <h5 class="footer__homepage-title">Помощь</h5>
+            <li class="footer__homepage-item">Поддержка</li>
+            <li class="footer__homepage-item">Доставка</li>
+            <li class="footer__homepage-item">Условия</li>
+            <li class="footer__homepage-item">Политика</li>
+          </ul>
+          <ul class="footer__homepage-list">
+            <h5 class="footer__homepage-title">Вопросы</h5>
+            <li class="footer__homepage-item">Аккаунт</li>
+            <li class="footer__homepage-item">О доставке</li>
+            <li class="footer__homepage-item">Заказы</li>
+            <li class="footer__homepage-item">Платежи</li>
+          </ul>
+          <ul class="footer__homepage-list">
+            <h5 class="footer__homepage-title">Ресурсы</h5>
+            <li class="footer__homepage-item">Бесплатные книги</li>
+            <li class="footer__homepage-item">Уроки</li>
+            <li class="footer__homepage-item">Блог</li>
+            <li class="footer__homepage-item">Плейлист на YouTube</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer__bottom-container">
+        <p class="footer__copyright">Shop.co © 2000-2023, Все права защищены</p>
+        <div class="footer__paycards">
+          <svg width="65" height="49">
+            <use href="./icons/paycards.svg#visa"></use>
+          </svg>
+
+          <svg width="65" height="49">
+            <use href="./icons/paycards.svg#mastercard"></use>
+          </svg>
+
+          <svg width="65" height="49">
+            <use href="./icons/paycards.svg#paypal"></use>
+          </svg>
+
+          <svg width="65" height="49">
+            <use href="./icons/paycards.svg#applepay"></use>
+          </svg>
+
+          <svg width="65" height="49">
+            <use href="./icons/paycards.svg#googlepay"></use>
+          </svg>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<li
+  data-ng-class='{active: activeTab === "address-book"}'
+  data-ng-click='activeTab = "address-book"'
+  class="private-office__tabs__item address-book"
+  data-source=""
+  style=""
+>
+  Адресная книга
+</li>

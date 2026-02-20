@@ -1,0 +1,1022 @@
+<!doctype html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+  </head>
+  <body class="page__body">
+    <div class="top-bar">
+      <div class="container top-bar__container">
+        <div class="top-bar__wrapper">
+          <span class="top-bar__text">
+            Зарегестрируйтесь и получите скидку 20% на первую покупку.
+          </span>
+          <a class="top-bar__link" href="#">Зарегестрироваться сейчас</a>
+          <button class="top-bar__btn-cross"> 
+            <svg width="20" height="20">
+              <use href="./icons/cross-bar.svg#cross-bar">
+                
+              </use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__logo">
+          <button
+            class="header__burger burger"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="header__menu"
+          >
+            <svg width="24" height="24">
+              <use
+                class="burger__icon-menu"
+                href="./icons/sprite.svg#burger"
+              ></use>
+              <use
+                class="burger__icon-cross"
+                href="./icons/sprite.svg#cross"
+              ></use>
+            </svg>
+          </button>
+
+          <a href="/" class="header__logo-link"> shop.co </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#shop" class="header__nav-link">Магазин
+                <svg width="16" height="16">
+                  <use href="./icons//arrows.svg#down-arrow">
+
+                  </use>
+                </svg>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="" class="header__nav-link">Скидки</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#news" class="header__nav-link">Новые поступления</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#brands" class="header__nav-link">Бренды</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <button class="header__search">
+            <svg width="24" height="24">
+              <use
+                class="header__seacrh-icon"
+                href="./icons/sprite.svg#search"
+              ></use>
+            </svg>
+            <p class="header__search-text">Искать товары...</p>
+          </button>
+          <a
+            class="header__actions-button"
+            title="Корзина"
+            aria-label="Корзина"
+          >
+            <svg width="24" height="24">
+              <use
+                class="header__actions-icon"
+                href="./icons/sprite.svg#cart"
+              ></use>
+            </svg>
+          </a>
+          <a
+          href="personal-account.html"
+            class="header__actions-button"
+            title="Личный кабинет"
+            aria-label="Личный кабинет"
+          >
+            <svg width="24" height="24">
+              <use
+                class="header__actions-icon"
+                href="./icons/sprite.svg#kabinet"
+              ></use>
+            </svg>
+          </a>
+        </div>
+        <!-- <div class="header__search">
+          <svg width="24" height="24" > 
+            <use class="header__seacrh-icon" href="./icons/sprite.svg#search"></use>
+          </svg>
+          <p class="header__search-text">Искать товары...</p>
+        </div>
+        <div class="header__actions">
+          <button
+            class="header__actions-button"
+            title="Корзина"
+            aria-label="Корзина"
+          >
+            <svg width="24" height="24">
+              <use
+                class="header__actions-icon"
+                href="./icons/sprite.svg#cart"
+              ></use>
+            </svg>
+          </button>
+          <button
+              class="header__actions-button"
+              title="Личный кабинет"
+              aria-label="Личный кабинет"
+            >
+              <svg width="24" height="24">
+                <use
+                  class="header__actions-icon"
+                  href="./icons/sprite.svg#kabinet"
+                ></use>
+              </svg>
+            </button>
+        </div> -->
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__left">
+            <h2 class="hero__title">НАЙДИ ОДЕЖДУ КОТОРАЯ ВЫРАЗИТ ТВОЙ СТИЛЬ</h2>
+            <p class="hero__descr">
+              Просмотрите наш набор тщательно сделанной одежды, созданный чтобы
+              подчеркнуть ваш индивидуальный стиль.
+            </p>
+            <button class="hero__btn">Купить сейчас</button>
+            <div class="hero__cards">
+              <div class="hero__card">
+                <div class="hero__card-num">200+</div>
+                <p class="hero__card-text">Всемирных брендов</p>
+              </div>
+              <div class="hero__card">
+                <div class="hero__card-num">2,000+</div>
+                <p class="hero__card-text">Качественных товаров</p>
+              </div>
+              <div class="hero__card">
+                <div class="hero__card-num">30,000+</div>
+                <p class="hero__card-text">Счастливых клиентов</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero__right">
+            <picture>
+              <source srcset="./images/hero-img.webp" type="image/webp" />
+              <img
+                src="./images/hero-img.jpg"
+                width="672"
+                height="777"
+                alt="Парень с девушкой стоят презентуют одежду"
+                class="hero__img"
+              />
+            </picture>
+            <img
+              class="hero__img-before"
+              src="./icons/star-big-hero.svg"
+              alt=""
+            />
+            <img
+              class="hero__img-after"
+              src="./icons/star-small-hero.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section id="brands" class="brands">
+        <div class="container brands__container">
+          <img
+            src="./icons/brands/versace.svg"
+            width="166"
+            height="33"
+            alt="Versace"
+            class="brands__logo-versace"
+          />
+          <img
+            src="./icons/brands/zara.svg"
+            width="91"
+            height="38"
+            alt="Zara"
+            class="brands__logo-zara"
+          />
+          <img
+            src="./icons/brands/gucci.svg"
+            width="156"
+            height="36"
+            alt="Gucci"
+            class="brands__logo-gucci"
+          />
+          <img
+            src="./icons/brands/prada.svg"
+            width="194"
+            height="32"
+            alt="Gucci"
+            class="brands__logo-gucci"
+          />
+          <img
+            src="./icons/brands/calvin-klein.svg"
+            width="206"
+            height="36"
+            alt="calvin-klein"
+            class="brands__logo-ck"
+          />
+        </div>
+      </section>
+      <section id="news" class="news">
+        <div class="container news__container">
+          <h2 class="news__title">НОВЫЕ ПОСТУПЛЕНИЯ</h2>
+          <ul class="news__clothes-list">
+            <li class="news__clothes-item">
+              <picture>
+                <source srcset="./images/clothes/black-t-shirt.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes/black-t-shirt.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Футболка с лентой</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-4.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price">₽5000</div>
+            </li>
+            <li class="news__clothes-item">
+              <picture>
+                <source srcset="./images/clothes/skinny-jeans.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes/skinny-jeans.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Узкие джинсы</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-3.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price-wrapper">
+                <span class="news__clothes-price">₽5000</span>
+                <span class="news__clothes-old-price">₽6000</span>
+                <div class="news__clothes-discount">-20%</div>
+              </div>
+            </li>
+            <li class="news__clothes-item">
+              <picture>
+                <source srcset="./images/clothes/plaid-shirt.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes/plaid-shirt.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Клетчатая рубашка</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-4.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price">₽7000</div>
+            </li>
+            <li class="news__clothes-item">
+              <picture>
+                <source srcset="./images/clothes/striper-t-shirt.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes/striper-t-shirt.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Футболка с полосами</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-4.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price-wrapper">
+                <span class="news__clothes-price">₽6000</span>
+                <span class="news__clothes-old-price">₽8000</span>
+                <div class="news__clothes-discount">-30%</div>
+              </div>
+            </li>
+            <li class="news__clothes-item is-hidden">
+              <picture>
+                <source srcset="./images/clothes/black-t-shirt.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes/black-t-shirt.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Футболка с лентой</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-4.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price">₽5000</div>
+            </li>
+            <li class="news__clothes-item is-hidden">
+              <picture>
+                <source srcset="./images/clothes/skinny-jeans.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes/skinny-jeans.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Узкие джинсы</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-3.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price-wrapper">
+                <span class="news__clothes-price">₽5000</span>
+                <span class="news__clothes-old-price">₽6000</span>
+                <div class="news__clothes-discount">-20%</div>
+              </div>
+            </li>
+            <li class="news__clothes-item is-hidden">
+              <picture>
+                <source srcset="./images/clothes/plaid-shirt.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes/plaid-shirt.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Клетчатая рубашка</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-4.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price">₽7000</div>
+            </li>
+            <li class="news__clothes-item is-hidden">
+              <picture>
+                <source srcset="./images/clothes/striper-t-shirt.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes/striper-t-shirt.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Футболка с полосами</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-4.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price-wrapper">
+                <span class="news__clothes-price">₽6000</span>
+                <span class="news__clothes-old-price">₽8000</span>
+                <div class="news__clothes-discount">-30%</div>
+              </div>
+            </li>
+          </ul>
+          <div class="news__button-wrapper">
+            <button class="news__button">Посмотреть всё</button>
+          </div>
+        </div>
+      </section>
+      <section class="liders">
+        <div class="container container__liders">
+          <h2 class="news__title">ЛИДЕРЫ ПРОДАЖ</h2>
+          <ul class="news__clothes-list">
+            <li class="news__clothes-item">
+              <picture>
+                <source srcset="./images/clothes-2/green-striper-shirt.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes-2/green-striper-shirt.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Рубашка в полоску</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-4.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price-wrapper">
+                <span class="news__clothes-price">₽5000</span>
+                <span class="news__clothes-old-price">₽6000</span>
+                <div class="news__clothes-discount">-20%</div>
+              </div>
+            </li>
+            <li class="news__clothes-item">
+              <picture>
+                <source srcset="./images/clothes-2/t-shirt-courage.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes-2/t-shirt-courage.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Футболка «Courage»</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-3.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price">₽5000</div>
+            </li>
+            <li class="news__clothes-item">
+              <picture>
+                <source srcset="./images/clothes-2/bermuda-shorts.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes-2/bermuda-shorts.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Свободные бермуды</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-4.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price">₽4000</div>
+            </li>
+            <li class="news__clothes-item">
+              <picture>
+                <source
+                  srcset="./images/clothes-2/distressed-skinny-jeans.webp"
+                />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes-2/distressed-skinny-jeans.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Потертые узкие джинсы</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-4.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price">₽7000</div>
+            </li>
+            <li class="news__clothes-item is-hidden">
+              <picture>
+                <source srcset="./images/clothes-2/green-striper-shirt.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes-2/green-striper-shirt.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Рубашка в полоску</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-4.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price-wrapper">
+                <span class="news__clothes-price">₽5000</span>
+                <span class="news__clothes-old-price">₽6000</span>
+                <div class="news__clothes-discount">-20%</div>
+              </div>
+            </li>
+            <li class="news__clothes-item is-hidden">
+              <picture>
+                <source srcset="./images/clothes-2/t-shirt-courage.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes-2/t-shirt-courage.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Футболка «Courage»</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-3.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price">₽5000</div>
+            </li>
+            <li class="news__clothes-item is-hidden">
+              <picture>
+                <source srcset="./images/clothes-2/bermuda-shorts.webp" />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes-2/bermuda-shorts.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Свободные бермуды</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-4.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price">₽4000</div>
+            </li>
+            <li class="news__clothes-item is-hidden">
+              <picture>
+                <source
+                  srcset="./images/clothes-2/distressed-skinny-jeans.webp"
+                />
+                <img
+                  class="news__clothes-img"
+                  src="./images/clothes-2/distressed-skinny-jeans.jpg"
+                  width="295"
+                  height="298"
+                  loading="lazy"
+                  alt=""
+                />
+              </picture>
+              <h5 class="news__clothes-title">Потертые узкие джинсы</h5>
+              <img
+                class="news__clothes-stars"
+                src="./icons/star-4.5.svg"
+                alt=""
+              />
+              <div class="news__clothes-price">₽7000</div>
+            </li>
+          </ul>
+
+          <div class="news__button-wrapper">
+            <button class="news__button">Посмотреть всё</button>
+          </div>
+        </div>
+      </section>
+      <section class="styles">
+        <div class="container styles__container">
+          <h2 class="styles__title">ВЫБЕРИ СВОЙ СТИЛЬ</h2>
+          <div class="styles__grid">
+            <article class="styles__grid-item item-1">
+              <h4 class="styles__grid-title">Свободный</h4>
+              <picture>
+                <source srcset="./images/style-grid/free-style-img.webp" />
+                <img
+                  src="./images/style-grid/free-style-img.jpg"
+                  width="407"
+                  height="289"
+                  loading="lazy"
+                  alt="Стоит мужчина татуированный с бородой в серой футболке презентует свободный стиль"
+                  class="styles__grid-img grid-img"
+                />
+              </picture>
+            </article>
+            <article class="styles__grid-item item-2">
+              <h4 class="styles__grid-title">Формальный</h4>
+              <picture>
+                <source srcset="./images/style-grid/formal-style-img.webp" />
+                <img
+                  src="./images/style-grid/formal-style-img.jpg"
+                  width="684"
+                  height="289"
+                  loading="lazy"
+                  alt="Стоит мужчина татуированный с бородой в клетчатом пиджаке с белой рубашкой презентует формальный стиль"
+                  class="styles__grid-img kvad-img"
+                />
+              </picture>
+            </article>
+            <article class="styles__grid-item item-3">
+              <h4 class="styles__grid-title">Вечерний</h4>
+              <picture>
+                <source srcset="./images/style-grid/evening-style-img.webp" />
+                <img
+                  src="./images/style-grid/evening-style-img.jpg"
+                  width="684"
+                  height="289"
+                  loading="lazy"
+                  alt="Стоит женщина в свободном белом свитере презентует вечерный стиль"
+                  class="styles__grid-img kvad-img"
+                />
+              </picture>
+            </article>
+            <article class="styles__grid-item item-4">
+              <h4 class="styles__grid-title">Спорт</h4>
+              <picture>
+                <source srcset="./images/style-grid/sport-style-img.webp" />
+                <img
+                  src="./images/style-grid/sport-style-img.jpg"
+                  width="407"
+                  height="289"
+                  loading="lazy"
+                  alt="Стоит мужчина в синей майке держа гантелю в руке презентует спортивный стиль"
+                  class="styles__grid-img grid-img"
+                />
+              </picture>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container reviews__container">
+          <h2 class="reviews__title">ЧТО О НАС ГОВОРЯТ</h2>
+          <div class="reviews__nav">
+            <button
+              class="reviews__prev"
+              type="button"
+              aria-label="Предыдущий отзыв"
+            >
+              <svg width="24" height="24">
+                <use
+                  class="reviews__nav-icon"
+                  href="./icons/arrows.svg#prev"
+                ></use>
+              </svg>
+            </button>
+            <button
+              class="reviews__next"
+              type="button"
+              aria-label="Следующий отзыв"
+            >
+              <svg width="24" height="24">
+                <use
+                  class="reviews__nav-icon"
+                  href="./icons/arrows.svg#next"
+                ></use>
+              </svg>
+            </button>
+          </div>
+          <div class="reviews__slider swiper">
+            <div class="reviews__wrapper swiper-wrapper">
+              <article class="reviews__slide swiper-slide">
+                <img
+                  src="./icons/star-5.svg"
+                  alt=""
+                  class="reviews__slide-star"
+                />
+                <h4 class="reviews__slide-name">
+                  Даниил В.
+                  <img
+                    src="./icons/check.svg"
+                    alt=""
+                    class="reviews__slide-name-check"
+                  />
+                </h4>
+                <p class="reviews__slide-descr">
+                  «Раньше было трудно найти одежду под мой стиль, пока я не
+                  открыл Shop.co. Их ассортимент впечатляет и подходит для
+                  разных вкусов и случаев.»
+                </p>
+              </article>
+              <article class="reviews__slide swiper-slide">
+                <img
+                  src="./icons/star-5.svg"
+                  alt=""
+                  class="reviews__slide-star"
+                />
+                <h4 class="reviews__slide-name">
+                  Альберт Б.
+                  <img
+                    src="./icons/check.svg"
+                    alt=""
+                    class="reviews__slide-name-check"
+                  />
+                </h4>
+                <p class="reviews__slide-descr">
+                  «Я всегда ищу уникальные модные вещи и был рад открыть для
+                  себя Shop.co. Их выбор одежды очень разнообразен и полностью
+                  соответствует последним модным трендам.»
+                </p>
+              </article>
+              <article class="reviews__slide swiper-slide">
+                <img
+                  src="./icons/star-5.svg"
+                  alt=""
+                  class="reviews__slide-star"
+                />
+                <h4 class="reviews__slide-name">
+                  Виталий У.
+                  <img
+                    src="./icons/check.svg"
+                    alt=""
+                    class="reviews__slide-name-check"
+                  />
+                </h4>
+                <p class="reviews__slide-descr">
+                  «Я в восторге от качества и стиля одежды, которую получил от
+                  Shop.co. От повседневных вещей до элегантных платьев — каждая
+                  покупка превзошла мои ожидания.»
+                </p>
+              </article>
+              <article class="reviews__slide swiper-slide">
+                <img
+                  src="./icons/star-5.svg"
+                  alt=""
+                  class="reviews__slide-star"
+                />
+                <h4 class="reviews__slide-name">
+                  Sarah M.
+                  <img
+                    src="./icons/check.svg"
+                    alt=""
+                    class="reviews__slide-name-check"
+                  />
+                </h4>
+                <p class="reviews__slide-descr">
+                  «Я поражён качеством и стилем одежды, которую получил от
+                  Shop.co. От повседневной одежды до элегантных платьев — каждая
+                  вещь, которую я купил, превзошла мои ожидания.»
+                </p>
+              </article>
+              <article class="reviews__slide swiper-slide">
+                <img
+                  src="./icons/star-5.svg"
+                  alt=""
+                  class="reviews__slide-star"
+                />
+                <h4 class="reviews__slide-name">
+                  Матвей К.
+                  <img
+                    src="./icons/check.svg"
+                    alt=""
+                    class="reviews__slide-name-check"
+                  />
+                </h4>
+                <p class="reviews__slide-descr">
+                  «Я всегда ищу уникальные модные вещи и рад, что открыл
+                  Shop.co. Их ассортимент одежды разнообразен и полностью
+                  соответствует последним модным тенденциям.»
+                </p>
+              </article>
+              <article class="reviews__slide swiper-slide">
+                <img
+                  src="./icons/star-5.svg"
+                  alt=""
+                  class="reviews__slide-star"
+                />
+                <h4 class="reviews__slide-name">
+                  Даниил В.
+                  <img
+                    src="./icons/check.svg"
+                    alt=""
+                    class="reviews__slide-name-check"
+                  />
+                </h4>
+                <p class="reviews__slide-descr">
+                  «Раньше было трудно найти одежду под мой стиль, пока я не
+                  открыл Shop.co. Их ассортимент впечатляет и подходит для
+                  разных вкусов и случаев.»
+                </p>
+              </article>
+              <article class="reviews__slide swiper-slide">
+                <img
+                  src="./icons/star-5.svg"
+                  alt=""
+                  class="reviews__slide-star"
+                />
+                <h4 class="reviews__slide-name">
+                  Альберт Б.
+                  <img
+                    src="./icons/check.svg"
+                    alt=""
+                    class="reviews__slide-name-check"
+                  />
+                </h4>
+                <p class="reviews__slide-descr">
+                  «Я всегда ищу уникальные модные вещи и был рад открыть для
+                  себя Shop.co. Их выбор одежды очень разнообразен и полностью
+                  соответствует последним модным трендам.»
+                </p>
+              </article>
+              <article class="reviews__slide swiper-slide">
+                <img
+                  src="./icons/star-5.svg"
+                  alt=""
+                  class="reviews__slide-star"
+                />
+                <h4 class="reviews__slide-name">
+                  Виталий У.
+                  <img
+                    src="./icons/check.svg"
+                    alt=""
+                    class="reviews__slide-name-check"
+                  />
+                </h4>
+                <p class="reviews__slide-descr">
+                  «Я в восторге от качества и стиля одежды, которую получил от
+                  Shop.co. От повседневных вещей до элегантных платьев — каждая
+                  покупка превзошла мои ожидания.»
+                </p>
+              </article>
+              <article class="reviews__slide swiper-slide">
+                <img
+                  src="./icons/star-5.svg"
+                  alt=""
+                  class="reviews__slide-star"
+                />
+                <h4 class="reviews__slide-name">
+                  Sarah M.
+                  <img
+                    src="./icons/check.svg"
+                    alt=""
+                    class="reviews__slide-name-check"
+                  />
+                </h4>
+                <p class="reviews__slide-descr">
+                  «Я поражён качеством и стилем одежды, которую получил от
+                  Shop.co. От повседневной одежды до элегантных платьев — каждая
+                  вещь, которую я купил, превзошла мои ожидания.»
+                </p>
+              </article>
+              <article class="reviews__slide swiper-slide">
+                <img
+                  src="./icons/star-5.svg"
+                  alt=""
+                  class="reviews__slide-star"
+                />
+                <h4 class="reviews__slide-name">
+                  Матвей К.
+                  <img
+                    src="./icons/check.svg"
+                    alt=""
+                    class="reviews__slide-name-check"
+                  />
+                </h4>
+                <p class="reviews__slide-descr">
+                  «Я всегда ищу уникальные модные вещи и рад, что открыл
+                  Shop.co. Их ассортимент одежды разнообразен и полностью
+                  соответствует последним модным тенденциям.»
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="disctribution">
+        <div class="container disctribution__container">
+          <h3 class="disctribution__title">
+            БУДЬТЕ В КУРСЕ ВСЕХ ПОСЛЕДНИХ НОВОСТЕЙ
+          </h3>
+          <form class="disctribution__form">
+            <label class="disctribution__form-label">
+              <div class="input-wrapper">
+                <svg width="24" height="24">
+                  <use href="./icons/sprite.svg#mail">
+
+                  </use>
+                </svg>
+                <input
+                  class="disctribution__input"
+                  type="email"
+                  placeholder="Ваша почта"
+                />
+              </div>
+            </label>
+            <button class="disctribution__button" type="submit">
+              Подписаться на рассылку
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="container footer__container">
+        <div class="footer__wrapper">
+          <div class="footer__logo-link">
+            <a href="/" class="footer__logo-link header__logo-link">
+              shop.co
+            </a>
+          </div>
+          <p class="footer__descr">
+            У нас есть одежда, что подходит вашему стилю и которой можно
+            гордиться. Для женщин и мужчин.
+          </p>
+          <div class="footer__socials-links">
+            <a href="#">
+              <svg width="28" height="28">
+                <use href="./icons/socials.svg#twitter"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="28" height="28">
+                <use href="./icons/socials.svg#facebook"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="28" height="28">
+                <use href="./icons/socials.svg#instagram"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="28" height="28">
+                <use href="./icons/socials.svg#reddit"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__homepage-wrapper">
+          <ul class="footer__homepage-list">
+            <h5 class="footer__homepage-title">Компания</h5>
+            <li class="footer__homepage-item">О нас</li>
+            <li class="footer__homepage-item">Функции</li>
+            <li class="footer__homepage-item">Работы</li>
+            <li class="footer__homepage-item">Карьера</li>
+          </ul>
+          <ul class="footer__homepage-list">
+            <h5 class="footer__homepage-title">Помощь</h5>
+            <li class="footer__homepage-item">Поддержка</li>
+            <li class="footer__homepage-item">Доставка</li>
+            <li class="footer__homepage-item">Условия</li>
+            <li class="footer__homepage-item">Политика</li>
+          </ul>
+          <ul class="footer__homepage-list">
+            <h5 class="footer__homepage-title">Вопросы</h5>
+            <li class="footer__homepage-item">Аккаунт</li>
+            <li class="footer__homepage-item">О доставке</li>
+            <li class="footer__homepage-item">Заказы</li>
+            <li class="footer__homepage-item">Платежи</li>
+          </ul>
+          <ul class="footer__homepage-list">
+            <h5 class="footer__homepage-title">Ресурсы</h5>
+            <li class="footer__homepage-item">Бесплатные книги</li>
+            <li class="footer__homepage-item">Уроки</li>
+            <li class="footer__homepage-item">Блог</li>
+            <li class="footer__homepage-item">Плейлист на YouTube</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer__bottom-container">
+        <p class="footer__copyright">Shop.co © 2000-2023, Все права защищены</p>
+        <div class="footer__paycards">
+          <svg width="65" height="49">
+            <use href="./icons/paycards.svg#visa"></use>
+          </svg>
+
+          <svg width="65" height="49">
+            <use href="./icons/paycards.svg#mastercard"></use>
+          </svg>
+
+          <svg width="65" height="49">
+            <use href="./icons/paycards.svg#paypal"></use>
+          </svg>
+
+          <svg width="65" height="49">
+            <use href="./icons/paycards.svg#applepay"></use>
+          </svg>
+
+          <svg width="65" height="49">
+            <use href="./icons/paycards.svg#googlepay"></use>
+          </svg>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

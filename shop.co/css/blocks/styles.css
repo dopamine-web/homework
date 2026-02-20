@@ -1,0 +1,97 @@
+.styles__container {
+  background-color: #f5f5f5;
+  border-radius: 40px;
+  padding: clamp(40px, 2.86vw + 28.9px, 70px) clamp(24px, 3.81vw + 9.1px, 64px)
+    clamp(27px, 4.67vw + 8.8px, 76px);
+}
+
+.styles__grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.6fr;
+  gap: 20px;
+}
+
+.item-1 {
+  grid-column: span 1;
+}
+.item-2 {
+  grid-column: span 2;
+}
+.item-3 {
+  grid-column: span 2;
+}
+.item-4 {
+  grid-column: span 1;
+}
+
+@media (max-width: 800px) {
+  .styles__grid {
+    /* Переключаем на одну колонку */
+    grid-template-columns: 1fr;
+  }
+
+  .item-1,
+  .item-2,
+  .item-3,
+  .item-4 {
+    /* Каждая карточка теперь занимает 1 колонку (всю ширину) */
+    grid-column: span 1;
+    /* Можно немного уменьшить высоту карточек для мобилок, если нужно */
+  }
+
+}
+
+.styles__title {
+  font-family: var(--second-family);
+  font-weight: 900;
+  font-size: clamp(30px, 1.71vw + 23.3px, 48px);
+  text-align: center;
+  margin-bottom: clamp(28px, 3.43vw + 14.6px, 64px);
+}
+
+.styles__grid-item {
+  position: relative;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: clamp(24px, 1.14vw + 19.5px, 36px);
+}
+
+@media (width <= 500px) {
+  .styles__grid-item {
+    max-width: 310px;
+    /* max-height: 190px; */
+  }
+
+  .styles__grid {
+    justify-items: center;
+  }
+
+}                       
+
+.styles__grid-item img {
+  border-radius: 20px;
+  max-height: 289px;
+  height: 100%;
+  width: 100%;
+}
+
+.styles__grid-title {
+  position: absolute;
+  top: 25px;
+  left: 36px;
+}
+
+@media (width <= 1100px) {
+  .styles__grid-title {
+    position: absolute;
+    top: 16px;
+    left: 24px;
+  }
+}
+.grid-img,
+.grid-img {
+  max-width: 407px;
+  width: 100%;
+}
+
+

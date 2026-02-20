@@ -1,0 +1,40 @@
+.brands {
+  background-color: #000;
+  padding-block: 44px;
+}
+
+.brands__container {
+  display: flex;
+  gap: 20px 106px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (width <= 500px) {
+    .brands__container {
+        gap: 20px 34px;
+    }
+}
+
+@media (width <= 500px) {
+    .brands__logo-versace {
+        width: 116px;
+        height: 23px;
+    }
+    .brands__logo-zara {
+        width: 63px;
+        height: 26px;
+    }
+    .brands__logo-gucci {
+        width: 109px;
+        height: 25px;
+    }
+    .brands__logo-prada {
+        width: 127px;
+        height: 21px;
+    }
+    .brands__logo-ck {
+        width: 134px;
+        height: 21px;
+    }
+}
