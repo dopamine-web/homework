@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARKHIV — Архитектурное Бюро</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<!-- PARTNER BAR -->
+<div class="partner-bar">
+  <span>Партнёр:</span>
+  <a href="https://www.contecasa.it/en/" target="_blank">CONTECASA.IT</a>
+  <span>↗</span>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-logo" onclick="showPage('home')">DG<span>K</span>ON</div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home'); scrollToSection('about')">Обо мне</a></li>
+    <li><a onclick="showPage('home'); scrollToSection('projects')">Проекты</a></li>
+    <li><a onclick="showPage('home'); scrollToSection('services')">Услуги</a></li>
+    <li><a onclick="showPage('home'); scrollToSection('contact')">Контакты</a></li>
+    <li><a class="nav-portfolio-link" onclick="showPage('portfolio')">Портфолио</a></li>
+  </ul>
+  <button class="burger" id="burgerBtn" onclick="toggleMenu()" aria-label="Меню">
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+  </button>
+</nav>
+<div class="mobile-menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu-inner">
+    <a class="mobile-link" onclick="mobileNav('about')">Обо мне</a>
+    <a class="mobile-link" onclick="mobileNav('projects')">Проекты</a>
+    <a class="mobile-link" onclick="mobileNav('services')">Услуги</a>
+    <a class="mobile-link" onclick="mobileNav('contact')">Контакты</a>
+    <a class="mobile-link portfolio-mobile" onclick="mobileNav('portfolio')">Портфолио →</a>
+  </nav>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- HOME PAGE -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content fade-in visible">
+      <div class="hero-label">Дизайнер Архитектор · Эстония · Таллинн</div>
+      <h1 class="hero-title">
+        Пространство как язык
+      </h1>
+      <p class="hero-sub">
+        Архитектура, которая говорит тишиной. Каждый проект — диалог между материей, светом и человеком.
+      </p>
+      <div class="hero-cta">
+        <button class="btn-primary" onclick="showPage('home'); setTimeout(() => scrollToSection('projects'), 100)">Смотреть проекты</button>
+        <button class="btn-outline" onclick="showPage('home'); setTimeout(() => scrollToSection('contact'), 100)">Связаться</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-header fade-in">
+      <div>
+        <div class="section-label">Обо мне</div>
+        <h2 class="section-title">Галина<br>Кононенкова</h2>
+      </div>
+      <div class="section-num">02</div>
+    </div>
+    <div class="about-grid fade-in">
+      <div class="about-img">
+        <img src="./img/autor.jpg" alt="">
+      </div>
+      <div class="about-text">
+        <div class="about-name">Главный<br>архитектор</div>
+        <div class="about-role">MAArch · RIBA · AA School of Architecture</div>
+        <p class="about-desc">
+          Творчество является неотъемлемой и глубоко значимой частью моей жизни. Каждый новый проект открывает возможности для личного и профессионального роста, обогащает мой опыт и позволяет вдохновлять как себя, так и других на творческие достижения.
+        </p>
+        <p class="about-desc">
+          В каждом проекте я стремлюсь создавать пространства и решения, которые объединяют функциональность, эстетику и ориентированный на пользователя дизайн, одновременно предлагая уникальный и запоминающийся опыт.
+        </p>
+        <p class="about-desc">
+          Для меня творческий процесс — это постоянный источник обучения и самореализации, возможность развивать новые идеи, экспериментировать с инновационными решениями и формировать среды, которые поддерживают благополучие людей и качество их жизни.
+        </p>
+        <div class="about-stats">
+          <div>
+            <div class="stat-num">87</div>
+            <div class="stat-label">Проектов</div>
+          </div>
+          <div>
+            <div class="stat-num">16</div>
+            <div class="stat-label">Лет работы</div>
+          </div>
+          <div>
+            <div class="stat-num">12</div>
+            <div class="stat-label">Наград</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-header fade-in">
+      <div>
+        <div class="section-label">Избранные работы</div>
+        <h2 class="section-title">Проекты</h2>
+      </div>
+      <div class="section-num">03</div>
+    </div>
+    <div class="projects-grid fade-in">
+
+      <a class="project-card" onclick="showProjectPage(1); return false;" href="#">
+        <div class="project-bg project-bg-1">
+          <div class="project-pattern">
+            <img src="./img/kit.jpg" alt="">
+          </div>
+        </div>
+        <div class="project-visible-info">
+          <div class="project-title">Кухни</div>
+        </div>
+        <div class="project-info">
+          <div class="project-arrow">Открыть проект</div>
+        </div>
+      </a>
+
+      <a class="project-card" onclick="showProjectPage(2); return false;" href="#">
+        <div class="project-bg project-bg-2">
+          <div class="project-pattern project-pattern-2">
+            <img src="./img/stol.jpg" alt="">
+          </div>
+        </div>
+        <div class="project-visible-info">
+          <div class="project-title">Столы и Стулья</div>
+        </div>
+        <div class="project-info">
+          <div class="project-arrow">Открыть проект</div>
+        </div>
+      </a>
+
+      <a class="project-card" onclick="showProjectPage(3); return false;" href="#">
+        <div class="project-bg project-bg-3">
+          <div class="project-pattern project-pattern-3">
+            <img src="./img/van.jpg" alt="">
+          </div>
+        </div>
+        <div class="project-visible-info">
+          <div class="project-title">Ванны</div>
+        </div>
+        <div class="project-info">
+          <div class="project-arrow">Открыть проект</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+  <div class="services-header">
+    <div class="section-tag reveal" style="justify-content:center">Services</div>
+    <h2 class="section-title reveal" style="text-align:center">What I <em>offer</em></h2>
+  </div>
+  <div class="services-grid reveal">
+    <div class="service-card">
+      <div class="service-tier">01 — Entry</div>
+      <div class="service-name">Basic</div>
+      <div class="service-price">150€</div>
+      <div class="service-price-note">per hour · consultation</div>
+      <ul class="service-list">
+        <li>Concept note</li>
+        <li>Furniture layout plan</li>
+        <li>Selection of furniture, lighting & textiles</li>
+        <li>Shopping lists with recommendations</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-tier">02 — Full</div>
+      <div class="service-name">Standard</div>
+      <div class="service-price">—</div>
+      <div class="service-price-note">Price on request</div>
+      <ul class="service-list">
+        <li>Concept note</li>
+        <li>Furniture layout plan</li>
+        <li>Selection of all finishing materials</li>
+        <li>Custom furniture design</li>
+        <li>Selection of furniture, lighting, and textiles</li>
+        <li>Adjustment/modernization of the lighting plan if needed</li>
+        <li>Shopping lists with recommendations</li>
+        <li>3D visualizations of the rooms</li>
+        <li>Selection of sanitary equipment</li>
+        <li>Selection of additional design elements</li>
+        
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-tier">03 — Complete</div>
+      <div class="service-name">Premium</div>
+      <div class="service-price">—</div>
+      <div class="service-price-note">Price on request</div>
+      <ul class="service-list">
+        <li>Concept note</li>
+        <li>Spatial plan (PDF, DWG)</li>
+        <li>Furniture layout plan (PDF, DWG)</li>
+        <li>3D interior visualization (DWG, PDF, drawing schedule)</li>
+        <li>Lighting plan and switch layout (PDF, DWG)</li>
+        <li>Socket layout and height plan (PDF, DWG)</li>
+        <li>Selection of interior finishing materials</li>
+        <li>Selection of sanitary equipment</li>
+        <li>Custom furniture design</li>
+        <li>Selection of furniture, lighting, textiles, etc.</li>
+        <li>Selection of additional decorative elements</li>
+        <li>Shopping lists with recommendations and partner discounts/codes</li>
+        <li>On-site consultations</li>
+        <li>Consultations in interior design showrooms, if needed</li>
+        <li>Construction drawings for builders (PDF, DWG)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <!-- PORTFOLIO BANNER -->
+  <div id="portfolio-preview">
+    <div class="portfolio-banner fade-in">
+      <div class="portfolio-banner-text">
+        <div class="label">Все работы</div>
+        <h2>Полное<br>портфолио</h2>
+        <p>87 реализованных проектов за 16 лет работы. Жилые дома, офисные башни, культурные объекты и общественные пространства.</p>
+      </div>
+      <button class="btn-primary" onclick="showPage('portfolio')" style="white-space: nowrap;">Открыть портфолио →</button>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-header fade-in">
+      <div>
+        <div class="section-label">Начните проект</div>
+        <h2 class="section-title">Контакты</h2>
+      </div>
+      <div class="section-num">05</div>
+    </div>
+    <div class="contact-grid fade-in">
+      <div class="contact-info">
+        <div class="contact-tagline">Каждый большой<br>проект начинается<br>с <em>одного звонка</em></div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Телефон</div>
+          <div class="contact-detail-value"><a href="tel:++37255596649">+372 5559 6649</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Email</div>
+          <div class="contact-detail-value"><a href="mailto:info@dgkon.ee">info@dgkon.ee</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Адрес</div>
+          <div class="contact-detail-value">Москва, Пречистенка 17<br>офис 302</div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-label">Часы работы</div>
+          <div class="contact-detail-value">Пн–Пт, 10:00–19:00</div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form onsubmit="handleForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Имя</label>
+              <input type="text" placeholder="Ваше имя">
+            </div>
+            <div class="form-group">
+              <label>Телефон</label>
+              <input type="tel" placeholder="+7 (___) ___-__-__">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="your@email.ru">
+          </div>
+          <div class="form-group">
+            <label>Тип проекта</label>
+            <select>
+              <option value="" disabled selected>Выберите тип</option>
+              <option>Жилой дом / коттедж</option>
+              <option>Квартира / апартаменты</option>
+              <option>Офис / коммерческое</option>
+              <option>Культурный / общественный объект</option>
+              <option>Реновация</option>
+              <option>Консультация</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Сообщение</label>
+            <textarea placeholder="Расскажите о вашем проекте..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%;">Отправить запрос</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">ARK<span>H</span>IV</div>
+    <div class="footer-copy">© 2026 DGKON. Все права защищены.</div>
+    <div class="footer-links">
+      <a onclick="showPage('home'); scrollToSection('about')">О нас</a>
+      <a onclick="showPage('portfolio')">Портфолио</a>
+      <a onclick="showPage('home'); scrollToSection('contact')">Контакты</a>
+    </div>
+  </footer>
+
+</div>
+<!-- /HOME PAGE -->
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- PROJECT PAGE 1 -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div id="page-project-1" class="page">
+  <button class="project-page-back" onclick="showPage('home'); setTimeout(() => scrollToSection('projects'), 100)">Назад к проектам</button>
+  <div class="project-page-hero" style="background: linear-gradient(135deg, #14100a 0%, #1e1a10 100%);">
+    <div class="project-page-bg" style="background:
+      repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(200,169,110,0.02) 40px, rgba(200,169,110,0.02) 41px);"></div>
+    <div class="project-page-content">
+      <div class="project-page-category">Жилая архитектура · 2023</div>
+      <h1 class="project-page-title">Резиденция<br>«Берёзовая роща»</h1>
+    </div>
+  </div>
+  <div class="project-page-body">
+    <div class="project-page-meta">
+      <div class="meta-item"><div class="meta-label">Площадь</div><div class="meta-value">480 м²</div></div>
+      <div class="meta-item"><div class="meta-label">Местоположение</div><div class="meta-value">Подмосковье</div></div>
+      <div class="meta-item"><div class="meta-label">Год</div><div class="meta-value">2021–2023</div></div>
+      <div class="meta-item"><div class="meta-label">Статус</div><div class="meta-value">Реализован</div></div>
+    </div>
+    <p class="project-page-text">Загородная резиденция расположена в естественном берёзовом лесу в 40 км от Москвы. Главная задача — создать дом, который не нарушает природный контекст, а становится его продолжением.</p>
+    <p class="project-page-text">Объём здания разделён на три крыла, которые расходятся веером вокруг центральной гостиной. Такая структура позволяет каждому крылу иметь свой вид на лес и собственный характер освещения в течение дня.</p>
+    <div class="project-page-images">
+      <div class="project-page-img"><div class="project-page-img-inner img-a">◻</div></div>
+      <div class="project-page-img"><div class="project-page-img-inner img-b">◈</div></div>
+      <div class="project-page-img"><div class="project-page-img-inner img-c">◷</div></div>
+      <div class="project-page-img"><div class="project-page-img-inner img-d">◎</div></div>
+    </div>
+    <p class="project-page-text">Материалы: необработанный бетон, термически модифицированная ясень, стекло с пониженным светоотражением. Конструкция позволяет панорамным окнам высотой 4 метра оставаться без видимых рам — только лес за стеклом.</p>
+  </div>
+  <footer>
+    <div class="footer-logo">ARK<span>H</span>IV</div>
+    <div class="footer-copy">© 2024 ARKHIV Studio.</div>
+    <div class="footer-links">
+      <a onclick="showPage('home')">Главная</a>
+      <a onclick="showProjectPage(2)">Следующий проект →</a>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- PROJECT PAGE 2 -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div id="page-project-2" class="page">
+  <button class="project-page-back" onclick="showPage('home'); setTimeout(() => scrollToSection('projects'), 100)">Назад к проектам</button>
+  <div class="project-page-hero" style="background: linear-gradient(135deg, #0a0e14 0%, #10182a 100%);">
+    <div class="project-page-bg" style="background: radial-gradient(circle at 30% 60%, rgba(100,140,200,0.05) 0%, transparent 60%);"></div>
+    <div class="project-page-content">
+      <div class="project-page-category">Коммерческая архитектура · 2022</div>
+      <h1 class="project-page-title">Офисный комплекс<br>«Вертикаль»</h1>
+    </div>
+  </div>
+  <div class="project-page-body">
+    <div class="project-page-meta">
+      <div class="meta-item"><div class="meta-label">Этажность</div><div class="meta-value">32 этажа</div></div>
+      <div class="meta-item"><div class="meta-label">Местоположение</div><div class="meta-value">Москва-Сити</div></div>
+      <div class="meta-item"><div class="meta-label">Год</div><div class="meta-value">2019–2022</div></div>
+      <div class="meta-item"><div class="meta-label">GBA</div><div class="meta-value">42 000 м²</div></div>
+    </div>
+    <p class="project-page-text">Высотный офисный комплекс в деловом центре города. Концепция фасада основана на идее вертикального движения — стеклянные панели смещены относительно друг друга, создавая эффект многослойности.</p>
+    <p class="project-page-text">На каждом пятом этаже расположены открытые террасы — «воздушные карманы», которые разбивают монолитность башни и предоставляют арендаторам пространство для неформального общения.</p>
+    <div class="project-page-images">
+      <div class="project-page-img"><div class="project-page-img-inner img-b">◈</div></div>
+      <div class="project-page-img"><div class="project-page-img-inner img-a">◻</div></div>
+      <div class="project-page-img"><div class="project-page-img-inner img-d">◎</div></div>
+      <div class="project-page-img"><div class="project-page-img-inner img-c">◷</div></div>
+    </div>
+    <p class="project-page-text">Система фасадного остекления получила сертификацию LEED Gold. Здание сокращает потребление энергии на 40% по сравнению с аналогичными объектами за счёт интегрированного управления инсоляцией.</p>
+  </div>
+  <footer>
+    <div class="footer-logo">ARK<span>H</span>IV</div>
+    <div class="footer-copy">© 2024 ARKHIV Studio.</div>
+    <div class="footer-links">
+      <a onclick="showPage('home')">Главная</a>
+      <a onclick="showProjectPage(3)">Следующий проект →</a>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- PROJECT PAGE 3 -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div id="page-project-3" class="page">
+  <button class="project-page-back" onclick="showPage('home'); setTimeout(() => scrollToSection('projects'), 100)">Назад к проектам</button>
+  <div class="project-page-hero" style="background: linear-gradient(135deg, #0e0a14 0%, #1a1028 100%);">
+    <div class="project-page-bg" style="background: repeating-linear-gradient(-45deg, transparent, transparent 30px, rgba(150,100,200,0.03) 30px, rgba(150,100,200,0.03) 31px);"></div>
+    <div class="project-page-content">
+      <div class="project-page-category">Культурная архитектура · 2021</div>
+      <h1 class="project-page-title">Культурный центр<br>«Архив»</h1>
+    </div>
+  </div>
+  <div class="project-page-body">
+    <div class="project-page-meta">
+      <div class="meta-item"><div class="meta-label">Площадь</div><div class="meta-value">3 200 м²</div></div>
+      <div class="meta-item"><div class="meta-label">Местоположение</div><div class="meta-value">Санкт-Петербург</div></div>
+      <div class="meta-item"><div class="meta-label">Год</div><div class="meta-value">2018–2021</div></div>
+      <div class="meta-item"><div class="meta-label">Тип</div><div class="meta-value">Реновация</div></div>
+    </div>
+    <p class="project-page-text">Бывший склад текстильной фабрики XIX века превращён в многофункциональный культурный центр. Ключевое решение — сохранить исторические кирпичные стены как несущую образную структуру, вписав в них новую жизнь.</p>
+    <p class="project-page-text">Внутри старой оболочки выстроен автономный объём из стекла и стали — концертный зал на 400 мест. Пространство между историческим и новым становится фойе, выставочными коридорами, кафе.</p>
+    <div class="project-page-images">
+      <div class="project-page-img"><div class="project-page-img-inner img-c">◷</div></div>
+      <div class="project-page-img"><div class="project-page-img-inner img-d">◎</div></div>
+      <div class="project-page-img"><div class="project-page-img-inner img-a">◻</div></div>
+      <div class="project-page-img"><div class="project-page-img-inner img-b">◈</div></div>
+    </div>
+    <p class="project-page-text">Проект получил премию «Лучший реновационный объект» на фестивале «Архитектон 2021» и вошёл в шортлист European Architecture Awards.</p>
+  </div>
+  <footer>
+    <div class="footer-logo">ARK<span>H</span>IV</div>
+    <div class="footer-copy">© 2024 ARKHIV Studio.</div>
+    <div class="footer-links">
+      <a onclick="showPage('home')">Главная</a>
+      <a onclick="showProjectPage(1)">К первому проекту</a>
+    </div>
+  </footer>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- PORTFOLIO PAGE -->
+<!-- ═══════════════════════════════════════════════════ -->
+<div id="page-portfolio" class="page">
+
+  <div class="portfolio-hero">
+    <button class="project-page-back" style="padding-top:0; margin-bottom: 32px;" onclick="showPage('home')">На главную</button>
+    <div class="section-label">87 реализованных проектов</div>
+    <h1 class="section-title" style="font-size: clamp(48px,6vw,90px);">Портфолио</h1>
+    <p style="font-size:14px; color: var(--text-dim); margin-top: 20px; max-width: 500px; line-height: 1.8;">Нажмите на категорию, чтобы увидеть проекты этого типа.</p>
+    <div class="portfolio-categories">
+      <button class="cat-btn active" onclick="filterPortfolio('all', this)">Все работы</button>
+      <button class="cat-btn" onclick="filterPortfolio('residential', this)">Жилая архитектура</button>
+      <button class="cat-btn" onclick="filterPortfolio('commercial', this)">Коммерческое</button>
+      <button class="cat-btn" onclick="filterPortfolio('cultural', this)">Культурное</button>
+      <button class="cat-btn" onclick="filterPortfolio('interior', this)">Интерьер</button>
+      <button class="cat-btn" onclick="filterPortfolio('landscape', this)">Ландшафт</button>
+    </div>
+  </div>
+
+  <!-- ALL GRID (default) -->
+  <div id="portfolio-main" class="portfolio-grid">
+    <div class="portfolio-item" data-cat="residential">
+      <div class="portfolio-item-bg" style="background: linear-gradient(135deg, #14100a, #252015);"></div>
+      <div class="portfolio-item-overlay">
+        <div class="portfolio-item-info">
+          <div class="portfolio-item-cat">Жилая</div>
+          <div class="portfolio-item-title">Резиденция «Берёзовая роща»</div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="commercial">
+      <div class="portfolio-item-bg" style="background: linear-gradient(135deg, #0a0e14, #101825);"></div>
+      <div class="portfolio-item-overlay">
+        <div class="portfolio-item-info">
+          <div class="portfolio-item-cat">Коммерческое</div>
+          <div class="portfolio-item-title">Офисный комплекс «Вертикаль»</div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="cultural">
+      <div class="portfolio-item-bg" style="background: linear-gradient(135deg, #0e0a14, #1a1028);"></div>
+      <div class="portfolio-item-overlay">
+        <div class="portfolio-item-info">
+          <div class="portfolio-item-cat">Культурное</div>
+          <div class="portfolio-item-title">Культурный центр «Архив»</div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="interior">
+      <div class="portfolio-item-bg" style="background: linear-gradient(135deg, #0a1210, #0e2018);"></div>
+      <div class="portfolio-item-overlay">
+        <div class="portfolio-item-info">
+          <div class="portfolio-item-cat">Интерьер</div>
+          <div class="portfolio-item-title">Апартаменты «Патриаршие»</div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="residential">
+      <div class="portfolio-item-bg" style="background: linear-gradient(135deg, #120a08, #201410);"></div>
+      <div class="portfolio-item-overlay">
+        <div class="portfolio-item-info">
+          <div class="portfolio-item-cat">Жилая</div>
+          <div class="portfolio-item-title">Таунхаус «Сосновый»</div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="landscape">
+      <div class="portfolio-item-bg" style="background: linear-gradient(135deg, #080e0a, #101a10);"></div>
+      <div class="portfolio-item-overlay">
+        <div class="portfolio-item-info">
+          <div class="portfolio-item-cat">Ландшафт</div>
+          <div class="portfolio-item-title">Парк «Новая Голландия»</div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="commercial">
+      <div class="portfolio-item-bg" style="background: linear-gradient(135deg, #0c0c14, #141428);"></div>
+      <div class="portfolio-item-overlay">
+        <div class="portfolio-item-info">
+          <div class="portfolio-item-cat">Коммерческое</div>
+          <div class="portfolio-item-title">Торговый центр «Квадрат»</div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="cultural">
+      <div class="portfolio-item-bg" style="background: linear-gradient(135deg, #140a0a, #281010);"></div>
+      <div class="portfolio-item-overlay">
+        <div class="portfolio-item-info">
+          <div class="portfolio-item-cat">Культурное</div>
+          <div class="portfolio-item-title">Музей современного искусства</div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="interior">
+      <div class="portfolio-item-bg" style="background: linear-gradient(135deg, #141008, #241c08);"></div>
+      <div class="portfolio-item-overlay">
+        <div class="portfolio-item-info">
+          <div class="portfolio-item-cat">Интерьер</div>
+          <div class="portfolio-item-title">Ресторан «Горизонт»</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY SUBPAGES -->
+  <div id="cat-residential" class="cat-subpage" style="padding: 60px;">
+    <h2 style="font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300; color:var(--white); margin-bottom:8px;">Жилая архитектура</h2>
+    <p style="font-size:13px; color:var(--text-dim); margin-bottom:48px; line-height:1.8;">Дома, в которых жизнь становится поэзией. От загородных резиденций до городских апартаментов — каждый проект отражает характер своего владельца.</p>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 2px;">
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#14100a,#252015);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2023</div><div class="portfolio-item-title">Резиденция «Берёзовая роща»</div></div></div></div>
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#120a08,#201410);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2022</div><div class="portfolio-item-title">Таунхаус «Сосновый»</div></div></div></div>
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#0a1008,#101a10);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2020</div><div class="portfolio-item-title">Усадьба «Дубровка»</div></div></div></div>
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#100e0a,#1a1808);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2019</div><div class="portfolio-item-title">Пентхаус «Арбат»</div></div></div></div>
+    </div>
+  </div>
+
+  <div id="cat-commercial" class="cat-subpage" style="padding: 60px;">
+    <h2 style="font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300; color:var(--white); margin-bottom:8px;">Коммерческая архитектура</h2>
+    <p style="font-size:13px; color:var(--text-dim); margin-bottom:48px; line-height:1.8;">Пространства для бизнеса, которые вдохновляют. Офисные здания, торговые центры и гостиницы — объекты, которые работают на имидж компании.</p>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 2px;">
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#0a0e14,#101825);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2022</div><div class="portfolio-item-title">Офисный комплекс «Вертикаль»</div></div></div></div>
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#0c0c14,#141428);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2020</div><div class="portfolio-item-title">Торговый центр «Квадрат»</div></div></div></div>
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#0a0a10,#10101e);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2018</div><div class="portfolio-item-title">Бизнес-центр «Призма»</div></div></div></div>
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#0a0c12,#0e1020);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2017</div><div class="portfolio-item-title">Гостиница «Северная»</div></div></div></div>
+    </div>
+  </div>
+
+  <div id="cat-cultural" class="cat-subpage" style="padding: 60px;">
+    <h2 style="font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300; color:var(--white); margin-bottom:8px;">Культурная архитектура</h2>
+    <p style="font-size:13px; color:var(--text-dim); margin-bottom:48px; line-height:1.8;">Здания, которые формируют культурную среду города. Музеи, театры, культурные центры — объекты с особой ответственностью перед обществом.</p>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 2px;">
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#0e0a14,#1a1028);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2021</div><div class="portfolio-item-title">Культурный центр «Архив»</div></div></div></div>
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#140a0a,#281010);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2019</div><div class="portfolio-item-title">Музей современного искусства</div></div></div></div>
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#0e0a10,#1a1020);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2016</div><div class="portfolio-item-title">Театр «Форма»</div></div></div></div>
+    </div>
+  </div>
+
+  <div id="cat-interior" class="cat-subpage" style="padding: 60px;">
+    <h2 style="font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300; color:var(--white); margin-bottom:8px;">Дизайн интерьера</h2>
+    <p style="font-size:13px; color:var(--text-dim); margin-bottom:48px; line-height:1.8;">Пространство внутри — продолжение архитектурного замысла. Квартиры, дома, рестораны и офисы с узнаваемым почерком бюро.</p>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 2px;">
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#0a1210,#0e2018);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2023</div><div class="portfolio-item-title">Апартаменты «Патриаршие»</div></div></div></div>
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#141008,#241c08);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2022</div><div class="portfolio-item-title">Ресторан «Горизонт»</div></div></div></div>
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#0c100e,#101a14);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2021</div><div class="portfolio-item-title">Офис IT-компании</div></div></div></div>
+    </div>
+  </div>
+
+  <div id="cat-landscape" class="cat-subpage" style="padding: 60px;">
+    <h2 style="font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300; color:var(--white); margin-bottom:8px;">Ландшафтный дизайн</h2>
+    <p style="font-size:13px; color:var(--text-dim); margin-bottom:48px; line-height:1.8;">Архитектура открытых пространств. Парки, сады, набережные и дворы как продолжение жизни за порогом дома.</p>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 2px;">
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#080e0a,#101a10);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2022</div><div class="portfolio-item-title">Парк «Новая Голландия»</div></div></div></div>
+      <div class="portfolio-item" style="aspect-ratio: 4/3;"><div class="portfolio-item-bg" style="background:linear-gradient(135deg,#0a0e08,#141808);"></div><div class="portfolio-item-overlay"><div class="portfolio-item-info"><div class="portfolio-item-cat">2020</div><div class="portfolio-item-title">Сад резиденции</div></div></div></div>
+    </div>
+  </div>
+
+  <footer style="margin-top: 0;">
+    <div class="footer-logo">ARK<span>H</span>IV</div>
+    <div class="footer-copy">© 2024 ARKHIV Studio.</div>
+    <div class="footer-links">
+      <a onclick="showPage('home')">На главную</a>
+      <a onclick="showPage('home'); setTimeout(() => scrollToSection('contact'), 100)">Контакты</a>
+    </div>
+  </footer>
+</div>
+<!-- /PORTFOLIO PAGE -->
+
+<script src="./js/main.js"></script>
+
+</body>
+</html>
